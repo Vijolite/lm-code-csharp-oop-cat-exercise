@@ -70,4 +70,11 @@ public class CatTests
         DomesticCat domesticCat = new();
         domesticCat.Eat().Should().Be("Purrrrrrr");
     }
+
+    [Test]
+    public void SpecialDomesticCat_Should_Make_A_Random_Sound_When_Eat_Is_Called()
+    {
+        SpecialDomesticCat specialDomesticCat = new();
+        specialDomesticCat.Eat().Should().BeOneOf("Purrrrrrr", "It will do I suppose"); 
+    }
 }
